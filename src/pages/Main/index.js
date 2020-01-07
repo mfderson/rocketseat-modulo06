@@ -3,17 +3,17 @@ import { Keyboard } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import api from '../../services/api';
 
-import { 
-  Container, 
-  Form, 
-  Input, 
-  SubmitButton, 
+import {
+  Container,
+  Form,
+  Input,
+  SubmitButton,
   List,
-  User, 
-  Avatar, 
-  Name, 
-  Bio, 
-  ProfileButton, 
+  User,
+  Avatar,
+  Name,
+  Bio,
+  ProfileButton,
   ProfileButtonText,
 } from './styles';
 
@@ -21,7 +21,7 @@ export default class Main extends Component {
   state = {
     newUser: '',
     users: [],
-  }
+  };
 
   handleAddUser = async () => {
     const { users, newUser } = this.state;
@@ -49,12 +49,12 @@ export default class Main extends Component {
     return (
       <Container>
         <Form>
-          <Input 
+          <Input
             autoCorrect={false}
             autoCapitalize="none"
             placeholder="Adicionar usuário"
             value={newUser}
-            onChangeText={text => this.setState({ newUser: text})}
+            onChangeText={text => this.setState({ newUser: text })}
             returnKeyType="send"
             onSubmitEditing={this.handleAddUser}
           />
